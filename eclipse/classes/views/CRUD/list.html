@@ -1,0 +1,46 @@
+ #{extends 'app/views/temp.html' /} 
+ #{set title:messages.get('crud.list.title', type.name) /}
+
+<div id="crudList" class="${type.name}">
+
+
+
+	<br>
+
+
+	<div class="panel panel-success">
+
+		<div class="panel-heading">
+			<h3>
+				&{'crud.list.title', type.name}
+				</h2>
+		</div>
+
+		<div class="panel-body">
+			<!--Ãæ°åÄÚÈÝ -->
+		
+			#{crud.search /}
+			
+			<br>
+			<div id="crudListTable" class="list-group-item">
+			<h4>#{crud.table /}</h4>
+			</div>
+			<br>
+			
+			<div id="crudListPagination">#{crud.pagination /}</div>
+
+			<p id="crudListAdd">
+				
+					<a class="btn btn-success"href="@{blank()}">&{'crud.add', type.modelName}</a>
+			
+			</p>
+		</div>
+	</div>
+
+
+
+
+
+
+
+</div>
